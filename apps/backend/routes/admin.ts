@@ -1,12 +1,22 @@
-import { Router } from "express";
+import {Router } from "express"
+import { adminMiddleware } from "../middleware/admin"
+
 
 const router = Router()
 
-router.post("/sign-up",(req,res) => {
+router.post("/contest",adminMiddleware,(req,res)=>{
 
 })
 
-router.post("/sign-in",(req,res) => {
+router.post("/challenge",adminMiddleware,(req,res)=>{
+    
+})
+
+router.post("/link/:challengeId/:contestId",adminMiddleware,(req,res)=>{
+    
+})
+
+router.delete("/link/:challengeId/:contestId",adminMiddleware,(req,res)=>{
     
 })
 
